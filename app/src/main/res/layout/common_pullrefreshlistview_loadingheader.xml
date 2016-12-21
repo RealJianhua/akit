@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <wenjh.akit.common.view.ReflushingHeaderView
+        android:id="@id/pullrefreshlist_layout_container"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 废弃支持了 -->
+        <wenjh.akit.common.view.HandyTextView
+            android:id="@id/pullrefreshlist_tv_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pull_to_refresh_refreshing_label"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_list_title" 
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@id/pullrefreshlist_iv_loading"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_marginBottom="5dip"
+            android:src="@drawable/ic_loading" />
+
+        <wenjh.akit.common.view.HandyTextView
+            android:id="@id/pullrefreshlist_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pullrefreshlist_lastTime"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/text_view_desc" />
+
+        <!-- 废弃支持了 -->
+        <ImageView
+            android:id="@id/pullrefreshlist_iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="5dip"
+            android:paddingRight="13dip"
+            android:scaleType="center"
+            android:visibility="gone" />
+    </wenjh.akit.common.view.ReflushingHeaderView>
+
+</LinearLayout>

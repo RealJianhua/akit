@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.wenjh.akit"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/background_normal" 
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:paddingBottom="@dimen/page_paddingbottom"
+            >
+
+            <wenjh.akit.common.view.SmartImageView
+                android:id="@+id/userprofile_iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cover_height"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+
+            <wenjh.akit.common.view.CircleImageView
+                android:id="@+id/userprofile_iv_avatar"
+                android:layout_width="@dimen/userprofile_avatar"
+                android:layout_height="@dimen/userprofile_avatar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dip"
+                android:scaleType="centerCrop"
+                app:border_color="@color/white"
+                app:border_width="2dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userprofile_iv_cover"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/page_paddingleft"
+                android:paddingRight="@dimen/page_paddingright"
+                android:paddingTop="@dimen/page_paddingtop" >
+
+                <TextView
+                    style="@style/Profile_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dip"
+                    android:text="@string/about" />
+
+                <wenjh.akit.common.view.EmoteTextView
+                    android:id="@+id/userprofile_tv_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_content"
+                    android:textSize="@dimen/text_view_content" />
+
+                <TextView
+                    style="@style/Profile_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friends" />
+
+                <wenjh.akit.common.view.AvatarsLayout
+                    android:id="@+id/userprofile_layout_friends"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:horizontalSpacing2="5dip"
+                    app:orientation="horizontal"
+                    app:verticalSpacing="5dip" />
+
+                <TextView
+                    style="@style/Profile_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interests" />
+
+                <wenjh.akit.common.view.TagsLayout
+                    android:id="@+id/userprofile_layout_interests"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:horizontalSpacing2="5dip"
+                    app:orientation="horizontal"
+                    app:verticalSpacing="5dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    
+    <Button
+        android:id="@+id/userprofile_btn_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chat"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

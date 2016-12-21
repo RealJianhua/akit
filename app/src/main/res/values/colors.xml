@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="segment_label_normal">#bfffffff</color>
+    <color name="segment_label_selected">#ffffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="dark_red">#ff8c1c1c</color>
+    <color name="transparent">#00000000</color>
+    <color name="placeholder">#00000000</color>
+    <color name="blackwith10tran">#1a000000</color>
+    <color name="light_gray">#ffececec</color>
+    <color name="light_yellow">#fffff99e</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="green">#ff95c81c</color>
+    <color name="orange">#ffefa600</color>
+    <color name="silver">#ffecebe8</color>
+    <color name="gray">#ff7f7f7f</color>
+    <color name="background_normal">#ffffffff</color>
+    <color name="background_undercard">#fff1f0e4</color>
+    <color name="background_dark">#ffd4ccc0</color>
+    <color name="background_cardlist">#f7f5ed</color>
+    <color name="download_progressbar_bg">#4c000000</color>
+    <color name="blupe_green">#09AF8B</color>
+    <color name="blue">#ff169aff</color>
+    <color name="devideline">#ffd0c9b8</color>
+    <color name="devideline_listview">#ffe5e2d4</color>
+    <color name="devideline_undercard">#ffc7c2b0</color>
+    <color name="devideline_messageplug">#cad1da</color>
+    <color name="bg_normal_dark">#fff0ece0</color>
+    
+    <color name="dialog_btn_press">#ffece5df</color>
+    <color name="dialog_btn_normal">#fffbf6f2</color>
+    <color name="dialog_background">#fffbf6f2</color>
+    
+    <color name="poplistmenu_border">#ffdddddd</color>
+    <color name="poplistmenu_item_press">#f2dee1e3</color>
+    
+    <color name="text_title">#ff5f5f5f</color>
+    <color name="text_content">#ffa19d94</color>
+    <color name="text_desc">#ffbebbb4</color>
+    <color name="text_btn_loadmore">#ffbebbb4</color>
+    <color name="text_highlight">#fff4a900</color>
+    <color name="text_undercard">#ff8e7e68</color>
+    <color name="text_empty">#ffd2cec1</color>
+    <color name="text_link">#ff1684ff</color>
+    <color name="text_light_notes">#ff999999</color>
+    <color name="chat_textcontent">@color/text_title</color>
+    <color name="chat_textlink">@color/text_link</color>
+    
+    <color name="actionbar_divider">#997abae3</color>
+    <color name="actionbar_textcolor_normal">#99ffffff</color>
+    <color name="actionbar_press">#4c000000</color>
+    <color name="actionbar_spinner_normal">@color/transparent</color>
+    <color name="actionbar_spinner_selected">#5f000000</color>
+    <color name="actionbar_spinner_press">#7f000000</color>
+    
+    <color name="bg_warning">#fde1b6</color>
+    <color name="text_warning">#b8956b</color>
+    
+	<color name="msgstatus_sent">#62caf0</color>
+    <color name="msgstatus_sending">#1a000000</color>
+    <color name="msgstatus_read">#7fd190</color>
+    <color name="msgstatus_failed">#f27391</color>
+    
+    <color name="maintab_text_normal">#ff666666</color>
+    <color name="maintab_text_selected_color">#ffa5a5a5</color>
+</resources>

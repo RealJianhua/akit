@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="rootlayout" type="id"/>
+    <item name="textview" type="id"/>
+    <item name="imageview" type="id"/>
+    <item name="actionbar" type="id"/>
+    <item name="pagertabcontent" type="id"/>
+    <item name="tabcontent" type="id"/>
+    <item name="framelayout" type="id"/>
+    <item name="layout_content" type="id"/>
+    <item name="toptip_icon_left" type="id" />
+    <item name="toptip_icon_right" type="id" />
+    <item name="toptip_text" type="id"/>
+    <item name="toptip_layoutcontainer" type="id" />
+    <item name="tag_item" type="id" />
+    <item name="tag_imgid" type="id" />
+    <item name="tag_position" type="id" />
+    <item name="listview" type="id" />
+    <item name="listemptyview" type="id" />
+    <item name="listitem_btn_loadmore" type="id" />
+    <item name="pullrefreshlist_layout_container" type="id" />
+    <item name="pullrefreshlist_iv_image" type="id" />
+    <item name="pullrefreshlist_tv_time" type="id" />
+    <item name="pullrefreshlist_tv_label" type="id" />
+    <item name="pullrefreshlist_iv_cancel" type="id" />
+    <item name="pullrefreshlist_iv_loading" type="id" />
+    <item name="chatmessageitem_iv_photo" type="id" />
+    <item name="chatmessageitem_tv_status" type="id" />
+    <item name="chatmessageitem_tv_ownername" type="id" />
+    <item name="chatmessageitem_layout_contentcontainer" type="id" />
+    <item name="tabwidget" type="id" />
+    <item name="tab_item_tv_label" type="id" />
+    <item name="tab_item_tv_badge" type="id" />
+
+</resources>

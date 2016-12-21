@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="60dip"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/page_paddingleft"
+    android:paddingRight="@dimen/page_paddingright" >
+
+    <wenjh.akit.common.view.CircleImageView
+        android:id="@+id/chatsessionitem_iv_avatar"
+        android:layout_width="44dip"
+        android:layout_height="44dip"
+        android:layout_marginRight="10dip"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <wenjh.akit.common.view.EmoteTextView
+            android:id="@+id/chatsessionitem_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:singleLine="true"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_list_title" 
+            />
+
+        <wenjh.akit.common.view.EmoteTextView
+            android:id="@+id/chatsessionitem_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/text_view_content" 
+            android:layout_below="@+id/chatsessionitem_tv_title"
+            android:layout_toRightOf="@+id/chatsessionitem_tv_status"
+            />
+        
+        <TextView
+            android:id="@+id/chatsessionitem_tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_status_readed"
+			android:layout_alignBaseline="@+id/chatsessionitem_tv_content"
+			android:includeFontPadding="false"
+			android:layout_marginRight="5dip"
+            android:padding="2dip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_notice"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chatsessionitem_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_content"
+        android:textSize="@dimen/text_small_notice" />
+
+    <TextView
+        android:id="@+id/chatsessionitem_tv_newbubble"
+        style="@style/Text_Notice_Bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

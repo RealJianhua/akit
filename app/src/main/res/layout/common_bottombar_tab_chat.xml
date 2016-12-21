@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainTabItem.Layout" >
+
+    <TextView
+        android:id="@id/tab_item_tv_label"
+        style="@style/MaintabItem.Label"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_tab_chat"
+        android:gravity="center_horizontal"
+        android:text="@string/chat" />
+
+
+    <TextView
+        android:id="@id/tab_item_tv_badge"
+        style="@style/BottomTab_Notice_Bubble"
+        android:layout_alignRight="@id/tab_item_tv_label"
+        android:text="1"
+        android:visibility="invisible" />
+
+</RelativeLayout>

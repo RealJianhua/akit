@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_normal"
+    android:orientation="vertical" >
+
+    <wenjh.akit.common.view.ScrollViewPager
+        android:id="@id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_above="@id/tabwidget"
+        />
+
+    <LinearLayout
+        android:id="@id/tabwidget"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/maintabbottomtabbar"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/maintab_layout_1"
+            layout="@layout/common_bottombar_tab_nearby" />
+
+        <include
+            android:id="@+id/maintab_layout_2"
+            layout="@layout/common_bottombar_tab_chat" />
+
+        <include
+            android:id="@+id/maintab_layout_3"
+            layout="@layout/common_bottombar_tab_me" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <LinearLayout
+        android:id="@id/layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <wenjh.akit.common.view.PullToRefreshListView
+            android:id="@id/listview"
+            style="@style/SimpleListView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"
+            android:divider="#00000000"
+            android:dividerHeight="10dip"
+            android:fastScrollEnabled="false"
+            android:listSelector="@drawable/list_selector_transition"
+            android:paddingBottom="@dimen/page_paddingbottom"
+            android:paddingLeft="@dimen/page_paddingleft"
+            android:paddingRight="@dimen/page_paddingright"
+            android:scrollbars="none"
+            android:stackFromBottom="true" 
+            android:transcriptMode="normal"
+            />
+
+        <LinearLayout
+            android:id="@+id/chat_layout_messageeditor"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/chat_iv_plusbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="13dip"
+                android:paddingRight="13dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_chat_plus_normal" />
+
+            <EditText
+                android:id="@+id/chat_et_inputmessage"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:hint="@string/chat_texteditor_hint"
+                android:imeOptions="actionSend"
+                android:singleLine="true"
+                android:textColor="@color/chat_textcontent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/layout_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <wenjh.akit.common.view.PullToRefreshListView
+        android:id="@id/listview"
+        style="@style/SimpleListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:paddingTop="@dimen/page_paddingtop"
+        />
+</LinearLayout>

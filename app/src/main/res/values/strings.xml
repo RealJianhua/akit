@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BaseMomo</string>
+    <string name="market_source">2</string>
+    <string name="network_error_client">process failed</string>
+    <string name="network_error_data">data parse failed</string>
+    <string name="network_error_other">network failed</string>
+    <string name="network_error_unavailable">network unavaliable</string>
+    <string name="network_error_timeout">network timeout</string>
+    <string name="main_activity_title">Blupe</string>
+    <string name="loadmore">Load More</string>
+    <string name="loading">Loading</string>
+    <string name="pull_to_refresh_pull_label">Pull Refresh</string>
+    <string name="pull_to_refresh_release_label">Release Refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pullrefreshlist_lastTime">Last Time:</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">527659594027212</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_community_profile">CommunityActivity</string>
+    <string name="imj_disconn">im disconnected</string>
+    <string name="imj_network_unavaliable">network unavaliable</string>
+    <string name="dialog_btn_cancel">Cancel</string>
+    <string name="dialog_btn_confirm">Confirm</string>
+    <string name="dialog_title">Alert</string>
+    <string name="chat_texteditor_hint">Send a chat</string>
+    <string name="error_no_camera">No camera</string>
+    <string name="error_photoalbum">No Photo album</string>
+    <string name="chat_plus_dialogtitle">send a chat</string>
+    <string name="choose_picture">Choose</string>
+    <string name="error_compress_failed">compress failed</string>
+    <string name="error_locate_failed">locate failed</string>
+    <string name="chat">Chat</string>
+    <string name="me">Me</string>
+    <string name="nearby">Nearby</string>
+    <string name="about">About</string>
+    <string name="interests">Interests</string>
+    <string name="friends">Friends</string>
+    <string name="members">Members</string>
+    <string name="tags">Tags</string>
+    <string name="activity">Activity</string>
+    <string name="news">News</string>
+    <string name="edit_success">edit success</string>
+    <string name="progress">progress ...</string>
+    <string name="edit_cover">Edit Cover</string>
+    <string name="edit_avatar">Edit Avatar</string>
+    <string name="create_community">Create Community</string>
+    <string name="edit_info">Edit info</string>
+    <string name="edit_community">Edit community</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="setting">Setting</string>
+    <string name="notification">Notification</string>
+    <string name="login">Login</string>
+    <string name="crop_image">Crop Image</string>
+
+</resources>

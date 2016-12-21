@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.wenjh.akit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_normal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/page_paddingbottom" >
+
+        <wenjh.akit.common.view.SmartImageView
+            android:id="@+id/edituserprofile_iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cover_height"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <wenjh.akit.common.view.CircleImageView
+            android:id="@+id/edituserprofile_iv_avatar"
+            android:layout_width="@dimen/userprofile_avatar"
+            android:layout_height="@dimen/userprofile_avatar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:scaleType="centerCrop"
+            app:border_color="@color/white"
+            app:border_width="2dip" />
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_publish_camera"
+            android:layout_toRightOf="@+id/edituserprofile_iv_avatar"
+            android:layout_below="@+id/edituserprofile_iv_avatar"
+            android:layout_marginLeft="-8dip"
+            android:layout_marginTop="-12dip"
+            />
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_publish_camera"
+            android:layout_alignBottom="@+id/edituserprofile_iv_cover"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edituserprofile_iv_cover"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/page_paddingleft"
+            android:paddingRight="@dimen/page_paddingright"
+            android:paddingTop="@dimen/page_paddingtop" >
+
+            <TextView
+                style="@style/EditProfile_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:layout_marginBottom="0dip"
+                android:text="@string/about" />
+
+            <wenjh.akit.common.view.EmoteEditeText
+                android:id="@+id/edituserprofile_et_about"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:hint="Input"
+                />
+
+            <TextView
+                style="@style/EditProfile_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+	            <TextView
+	                android:layout_width="120dip"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/text_content"
+	                android:textSize="@dimen/text_view_content"
+	                android:layout_centerVertical="true"
+	                android:text="Show" />
+	            
+	            <Switch
+	                android:id="@+id/edituserprofile_switch_showage"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                />
+            </RelativeLayout>
+            
+            
+            <TextView
+                style="@style/EditProfile_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hometown" />
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dip"
+                >
+	            <TextView
+	                android:layout_width="120dip"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/text_content"
+	                android:textSize="@dimen/text_view_content"
+	                android:layout_centerVertical="true"
+	                android:text="Show" />
+	            
+	            <Switch 
+	                android:id="@+id/edituserprofile_switch_showhometown"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                />
+            </RelativeLayout>
+            
+            <wenjh.akit.common.view.EmoteEditeText
+                android:id="@+id/edituserprofile_et_hometown"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="hometown"
+                />
+            
+            
+            <TextView
+                style="@style/EditProfile_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Occupation" />
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dip"
+                >
+	            <TextView
+	                android:layout_width="120dip"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/text_content"
+	                android:textSize="@dimen/text_view_content"
+	                android:layout_centerVertical="true"
+	                android:text="Show" />
+	            
+	            <Switch 
+	                android:id="@+id/edituserprofile_switch_showoccupation"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                />
+            </RelativeLayout>
+            
+            <wenjh.akit.common.view.EmoteEditeText
+                android:id="@+id/edituserprofile_et_occupation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="Occupation"
+                />
+            
+            <TextView
+                style="@style/EditProfile_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interest" />
+            
+            <wenjh.akit.common.view.TagsEditText
+                android:id="@+id/edituserprofile_et_tags"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

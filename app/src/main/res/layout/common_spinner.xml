@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_headerbar_spinner"
+    android:gravity="center_vertical"
+    android:paddingLeft="4dip" >
+
+    <wenjh.akit.common.view.HandyTextView
+        android:id="@+id/spinner_tv_text"
+        style="@style/ShadowedText.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="1"
+        android:textSize="18.0sp" 
+        />
+
+    <wenjh.akit.common.view.RotatingImageView
+        android:id="@+id/spinner_iv_rotaing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="2dip"
+        android:scaleType="centerInside"
+        android:layout_toRightOf="@+id/spinner_tv_text"
+        android:src="@drawable/ic_topbar_arrow_down" 
+        />
+    
+    <ImageView 
+        android:id="@+id/spinner_iv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:layout_marginTop="-4dip"
+        android:scaleType="center"
+        android:layout_toRightOf="@+id/spinner_iv_rotaing"
+        android:layout_alignTop="@+id/spinner_iv_rotaing"
+        android:visibility="gone"
+        android:src="@drawable/bg_msgtip_point"
+        />
+</RelativeLayout>

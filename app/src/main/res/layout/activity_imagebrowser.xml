@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/black"
+    >
+
+    <wenjh.akit.common.view.ScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/imagebrower_layout_pagelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:visibility="gone" 
+        android:layout_alignParentBottom="true"
+        android:background="#5e171b19"
+        >
+        <ImageView
+            android:id="@+id/imagebrower_iv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_topbar_save" />
+
+        <wenjh.akit.common.view.HandyTextView
+            android:id="@+id/imagebrower_tv_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#ffcdcdcd"
+            android:textSize="34sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

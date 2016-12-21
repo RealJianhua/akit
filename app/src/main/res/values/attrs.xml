@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeListView">
+        <!--<attr name="divider" format="reference|color" />-->
+        <attr name="dividerHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GIFView">
+        <attr name="android:src" />
+    </declare-styleable>
+    <declare-styleable name="PullToRefresh">
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" />
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+        <attr name="ptrDrawable" format="reference" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+        <attr name="ptrOverScroll" format="reference|boolean" />
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="Actionbar">
+        <attr name="android:text" />
+    </declare-styleable>
+    <declare-styleable name="HorizontalScrollView">
+        <attr name="pageWidth" format="dimension" />
+        <attr name="snapVelocity" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+    <declare-styleable name="MultiImageView">
+         <attr name="maxChildInLine" format="integer" />
+         <attr name="numColumns" format="integer" />
+         <attr name="columnWidth" format="dimension" />
+         <attr name="horizontalSpacing" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="UnderlineTextView">
+         <attr name="icon" format="reference" />
+         <attr name="hint" format="reference|string" />
+         <attr name="text" format="reference|string" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RoundRectImageView">
+        <attr name="topLeftRadius" format="dimension"/>
+        <attr name="topRightRadius" format="dimension"/>
+        <attr name="bottomLeftRadius" format="dimension"/>
+        <attr name="bottomRightRadius" format="dimension"/>
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing2" format="dimension"/>
+        <attr name="verticalSpacing" format="dimension"/>
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="fillLines" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="exceptLast" value="1"/>
+            <enum name="all" value="2"/>
+        </attr>
+        <attr name="debugDraw" format="boolean"/>
+        <attr name="weightSum" format="float" />
+        <attr name="weightDefault" format="float" />
+        <attr name="centerJustified" format="boolean" />
+        <attr name="android:gravity"/>
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_newLine" format="boolean"/>
+        <attr name="layout_horizontalSpacing" format="dimension"/>
+        <attr name="layout_verticalSpacing" format="dimension"/>
+        <attr name="layout_weight" format="float"/>
+        <attr name="layout_centerJustified" format="boolean" />
+        <attr name="android:layout_gravity"/>
+    </declare-styleable>
+
+</resources>

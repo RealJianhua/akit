@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/LoadMoreButton"
+	android:id="@+id/imgbtn_layout_container"
+	android:orientation="horizontal"
+	android:focusable="true"
+	android:clickable="true"
+	android:paddingLeft="15dip"
+	android:paddingRight="15dip"
+	>
+	
+	<!-- 图标 -->
+	<ImageView
+		android:id="@+id/imgbtn_iv_lefticon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:focusable="false"
+		android:layout_marginRight="10dip"
+		android:scaleType="centerInside"
+		/>
+	<!-- 按钮文字 -->
+	<wenjh.akit.common.view.HandyTextView
+		android:id="@+id/imgbtn_tv_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_title"
+		android:textSize="13sp"
+		android:gravity="center"
+		android:singleLine="true"
+		android:layout_gravity="center"
+		android:visibility="gone"
+		android:focusable="false"
+		/>
+		
+	<!-- 图标 -->
+	<ImageView
+		android:id="@+id/imgbtn_iv_righticon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:focusable="false"
+		android:layout_marginLeft="10dip"
+		android:scaleType="centerInside"
+		/>	
+</LinearLayout>

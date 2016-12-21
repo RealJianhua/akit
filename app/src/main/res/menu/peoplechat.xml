@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/peoplechat_menu_group"
+        android:showAsAction="always"
+        android:title="Menu"
+        android:icon="@drawable/ic_topbar_more"
+        >
+        <menu>
+            <item
+                android:id="@+id/peoplechat_menu_profile"
+                android:title="View Profile"/>
+            <item
+                android:id="@+id/peoplechat_menu_block"
+                android:title="Block"/>
+        </menu>
+    </item>
+</menu>

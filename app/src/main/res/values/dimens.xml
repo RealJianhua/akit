@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="text_content_title">16.0sp</dimen>
+    <dimen name="text_list_title">16.0sp</dimen>
+    <dimen name="text_list_desc">13.0sp</dimen>
+    <dimen name="text_view_content">15.0sp</dimen>
+    <dimen name="text_view_desc">13.0sp</dimen>
+    <dimen name="text_small_notice">11.0sp</dimen>
+    <dimen name="actionbar_height">54dip</dimen>
+    <dimen name="dialog_round_radius">4dip</dimen>
+    <dimen name="bottomtab_height">4dip</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="smallavatar">30dp</dimen>
+    <dimen name="shape_corners">4.0dip</dimen>
+    <dimen name="page_paddingleft">8dip</dimen>
+    <dimen name="page_paddingright">8dip</dimen>
+    <dimen name="page_paddingbottom">8dip</dimen>
+    <dimen name="page_paddingtop">8dip</dimen>
+    <dimen name="chat_textcontent">@dimen/text_view_content</dimen>
+    <dimen name="chat_imagecontent">120dp</dimen>
+    <dimen name="chat_mapcontent_width">180dp</dimen>
+    <dimen name="chat_mapcontent_height">90dp</dimen>
+    <dimen name="chat_imageradius">8.0dip</dimen>
+    <dimen name="chat_bubble_margin">8.0dip</dimen>
+    <dimen name="chat_avatar_margin">3.0dip</dimen>
+    <dimen name="maintabbottomtabbar">50dp</dimen>
+    <dimen name="userprofile_avatar">80dp</dimen>
+    <dimen name="avatar_big">80dp</dimen>
+    <dimen name="cover_height">223dp</dimen>
+    <dimen name="communityavatar_width">103dp</dimen>
+    <dimen name="communityavatar_height">80dp</dimen>
+
+</resources>

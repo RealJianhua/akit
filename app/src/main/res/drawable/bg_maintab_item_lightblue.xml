@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_segment_selected_pressed" android:state_enabled="true" android:state_pressed="true" android:state_selected="true"/>
+    <item android:drawable="@drawable/bg_segment_pressed" android:state_enabled="true" android:state_pressed="true" android:state_selected="false"/>
+    <item android:drawable="@drawable/bg_segment_selected_normal" android:state_enabled="true" android:state_selected="true"/>
+    <item android:drawable="@drawable/transparent"/>
+
+</selector>

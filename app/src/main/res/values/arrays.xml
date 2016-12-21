@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="user_report_reason">
+	    <item>Spam Account</item>
+	    <item>Violent or Illegal Activity</item>
+	    <item>Offensive or Inappropriate Material</item>
+	    <item>Persion is Harassing Me</item>
+	</string-array> 
+</resources>

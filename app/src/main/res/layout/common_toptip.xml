@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/toptip_layoutcontainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_warning"
+    android:gravity="center_vertical"
+    android:minHeight="36dip"
+    android:paddingLeft="8dip"
+    android:visibility="gone"
+    >
+
+    <ImageView
+        android:id="@id/toptip_icon_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:visibility="gone"
+        android:src="@drawable/ic_topbartip_mark" />
+
+    <wenjh.akit.common.view.ScrollingTextView
+        android:id="@id/toptip_text"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:textColor="@color/text_warning"
+        android:textSize="@dimen/text_view_desc"
+        />
+
+    <ImageView
+        android:id="@id/toptip_icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:visibility="gone"
+        android:src="@drawable/ic_topbartip_mark" />
+</LinearLayout>

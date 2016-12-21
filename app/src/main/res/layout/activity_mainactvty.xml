@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+    
+    <LinearLayout
+        android:id="@id/tabwidget"
+        style="@style/TopTab_Layout"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:id="@+id/mainactvty_layout_tabnearby"
+            style="@style/TopTab_Item"
+            android:gravity="center" 
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nearby"
+                android:textColor="@color/segment_label"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="18dip"
+            android:background="#33000000" />
+
+        <LinearLayout
+            android:id="@+id/mainactvty_layout_tabnews"
+            style="@style/TopTab_Item"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@id/tab_item_tv_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/news"
+                android:textColor="@color/segment_label"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <wenjh.akit.common.view.ScrollViewPager
+        android:id="@id/pagertabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0" 
+        android:background="@color/background_normal"
+        />
+
+</LinearLayout>

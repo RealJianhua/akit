@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/smallavatar" xmlns:app="http://schemas.android.com/apk/res/com.wenjh.akit">
+
+    <wenjh.akit.common.view.CircleImageView
+        android:id="@id/chatmessageitem_iv_photo"
+        android:layout_width="@dimen/smallavatar"
+        android:layout_height="@dimen/smallavatar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/chat_avatar_margin" 
+        android:layout_alignTop="@+id/chatmessageitem_iv_imagecontent"
+        />
+
+    <wenjh.akit.common.view.EmoteTextView
+        android:id="@id/chatmessageitem_tv_ownername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chatmessageitem_iv_imagecontent"
+        android:layout_marginLeft="@dimen/chat_bubble_margin"
+        android:textColor="@color/text_content"
+        android:textSize="@dimen/text_view_desc" />
+
+    <wenjh.akit.common.view.RoundRectImageView
+        android:id="@+id/chatmessageitem_iv_imagecontent"
+        style="@style/ChatMessageItem.Receive"
+        android:layout_width="@dimen/chat_imagecontent"
+        android:layout_height="@dimen/chat_imagecontent"
+        android:layout_below="@id/chatmessageitem_tv_ownername"
+        android:layout_toRightOf="@id/chatmessageitem_iv_photo"
+        app:radius="@dimen/chat_imageradius"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView 
+        android:id="@+id/chatmessageitem_iv_imageloading"
+        android:layout_width="@dimen/chat_imagecontent"
+        android:layout_height="@dimen/chat_imagecontent"
+        android:src="@drawable/chat_imageloading"
+		android:visibility="gone"
+		android:scaleType="center"
+		android:layout_alignLeft="@+id/chatmessageitem_iv_imagecontent"
+		android:layout_alignRight="@+id/chatmessageitem_iv_imagecontent"
+		android:layout_alignBottom="@+id/chatmessageitem_iv_imagecontent"
+		android:layout_alignTop="@+id/chatmessageitem_iv_imagecontent"
+        />
+    
+</RelativeLayout>
