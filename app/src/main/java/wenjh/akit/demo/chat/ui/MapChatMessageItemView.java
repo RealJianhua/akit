@@ -10,10 +10,10 @@ import android.widget.ImageView;
 
 import com.wenjh.akit.R;
 
+import wenjh.akit.demo.config.StorageConfigs;
 import wenjh.akit.demo.location.model.LatLng;
 import wenjh.akit.common.util.LogUtil;
 import wenjh.akit.common.view.SmartImageView;
-import wenjh.akit.config.StorageConfigs;
 
 import com.squareup.picasso.Picasso.LoadedFrom;
 

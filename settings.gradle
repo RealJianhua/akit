@@ -1,2 +1,2 @@
 rootProject.name = 'AK46'
-include ':app',':picasso:picasso'
+include ':app', ':picasso:picasso', ':akitdaocompiler', ':akit', ':android-gif-drawable:android-gif-drawable'

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingRight="@dimen/smallavatar" xmlns:app="http://schemas.android.com/apk/res/com.wenjh.akit">
+    android:paddingRight="@dimen/smallavatar" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <wenjh.akit.common.view.CircleImageView
         android:id="@id/chatmessageitem_iv_photo"

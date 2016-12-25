@@ -22,7 +22,7 @@
     <color name="background_dark">#ffd4ccc0</color>
     <color name="background_cardlist">#f7f5ed</color>
     <color name="download_progressbar_bg">#4c000000</color>
-    <color name="blupe_green">#09AF8B</color>
+    <color name="akit_green">#09AF8B</color>
     <color name="blue">#ff169aff</color>
     <color name="devideline">#ffd0c9b8</color>
     <color name="devideline_listview">#ffe5e2d4</color>

@@ -5,11 +5,13 @@ import java.util.Date;
 import android.os.Bundle;
 
 import wenjh.akit.common.receiver.MessageKeys;
+import wenjh.akit.common.util.AvatarAndName;
 import wenjh.akit.common.util.DateUtil;
+import wenjh.akit.common.util.Image;
 import wenjh.akit.demo.maintab.Community;
 import wenjh.akit.demo.people.model.User;
 
-public class ChatSession {
+public class ChatSession  implements AvatarAndName {
 	public final static int TYPE_PEOPLE = 1;
 	public final static int TYPE_COMMUNITY = 2;
 	
@@ -125,6 +127,15 @@ public class ChatSession {
 		}
 		return "";
 	}
+
+	public Image getAvatarImage() {
+		if(sessionType == TYPE_COMMUNITY) {
+			return remoteCommunity == null ? null : remoteCommunity.getCoverImage();
+		} else if(sessionType == TYPE_PEOPLE) {
+			return remoteUser == null ? null : remoteUser.getAvatarImage();
+		}
+		return null;
+	}
 	
 	public String getTextContent() {
 		if(lastMessage != null) {
@@ -176,6 +187,11 @@ public class ChatSession {
 		} else {
 			return -1;
 		}
+	}
+
+	@Override
+	public String getId() {
+		return sessionId;
 	}
 
 	@Override

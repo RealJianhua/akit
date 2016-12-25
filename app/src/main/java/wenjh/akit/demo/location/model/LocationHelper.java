@@ -154,7 +154,7 @@ public class LocationHelper {
 
 		   if(!gps_enabled && !network_enabled){
 		        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-		        dialog.setMessage("Blupe cannot work without location services enabled,Would you like to enable location service?");
+		        dialog.setMessage("AKit cannot work without location services enabled,Would you like to enable location service?");
 		        dialog.setPositiveButton("Yes!", new DialogInterface.OnClickListener() {
 
 		            @Override

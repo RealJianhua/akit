@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.wenjh.akit.R;
 
+import wenjh.akit.demo.ContextUtil;
 import wenjh.akit.demo.account.model.Preference;
 import wenjh.akit.activity.base.BaseListFragment;
 import wenjh.akit.common.http.NetworkBaseException;
@@ -56,7 +57,7 @@ public class NearbyCommunitysFragment extends BaseListFragment<Community> {
 	
 	private void initDataAsync() {
 		/*
-		 
+
 		final List<Community> communityList = communityService.getNearbyCommunities();
 		final Date lastRefreshTime = Preference.getTimesPreference(getContext()).getTime(NEARBY_COMMUNITY_LAST_REFRESHTIME, null);
 		log.i("lastRefreshTime="+lastRefreshTime);
@@ -68,8 +69,8 @@ public class NearbyCommunitysFragment extends BaseListFragment<Community> {
 				requestPullToRefresh();
 			}
 		});
-		
-		* 
+
+		*
 		*/
 	}
 	
@@ -92,9 +93,8 @@ public class NearbyCommunitysFragment extends BaseListFragment<Community> {
 			if(mLocation == null) {
 				throw new NetworkBaseException(getString(R.string.error_locate_failed));
 			}
-			
-			getApp().getCurrentAccount().updateCurrentLocation(mLocation);
-			
+			ContextUtil.getApp().getCurrentAccount().updateCurrentLocation(mLocation);
+
 			List<Community> list = null;//CommunityApi.getInstance().findNearyByCommunities(mLocation, PAGE_COUNT, mPageCounter);
 			
 			if(mPageCounter == 0) {

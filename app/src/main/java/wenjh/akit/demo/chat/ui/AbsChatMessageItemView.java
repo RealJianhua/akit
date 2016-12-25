@@ -1,7 +1,5 @@
 package wenjh.akit.demo.chat.ui;
 
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -10,12 +8,14 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
-import wenjh.akit.demo.chat.model.Message;
+import java.util.List;
+
+import wenjh.akit.common.util.LogUtil;
 import wenjh.akit.common.view.SmartImageView;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.chat.model.Message;
 import wenjh.akit.demo.people.model.User;
 import wenjh.akit.demo.people.ui.UserProfileActivity;
-import wenjh.akit.common.util.ContextUtil;
-import wenjh.akit.common.util.LogUtil;
 
 public class AbsChatMessageItemView extends FrameLayout {
 	private boolean mReceived = false;
@@ -84,7 +84,7 @@ public class AbsChatMessageItemView extends FrameLayout {
 
 	public void refreshViews() {
 		if (mAavatarImageView != null) {
-			mAavatarImageView.loadImageGuid(mOwnerUser.getAvatar());
+			mAavatarImageView.load(mOwnerUser.getAvatarImage());
 		}
 		if (mUserNameView != null) {
 			mUserNameView.setText(mOwnerUser.getDisplayName());

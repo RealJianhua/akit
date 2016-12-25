@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="text_content_title">16.0sp</dimen>
+    <dimen name="text_list_title">16.0sp</dimen>
+    <dimen name="text_list_desc">13.0sp</dimen>
+    <dimen name="text_view_content">15.0sp</dimen>
+    <dimen name="text_view_desc">13.0sp</dimen>
+    <dimen name="dialog_round_radius">4dip</dimen>
+    <dimen name="bottomtab_height">4dip</dimen>
+    <dimen name="smallavatar">30dp</dimen>
+    <dimen name="shape_corners">4.0dip</dimen>
+    <dimen name="page_paddingleft">8dip</dimen>
+    <dimen name="page_paddingright">8dip</dimen>
+    <dimen name="page_paddingbottom">8dip</dimen>
+    <dimen name="page_paddingtop">8dip</dimen>
+    <dimen name="avatar">60dp</dimen>
+</resources>

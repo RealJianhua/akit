@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BaseMomo</string>
+    <string name="app_name">AKit</string>
     <string name="market_source">2</string>
     <string name="network_error_client">process failed</string>
     <string name="network_error_data">data parse failed</string>
     <string name="network_error_other">network failed</string>
     <string name="network_error_unavailable">network unavaliable</string>
     <string name="network_error_timeout">network timeout</string>
-    <string name="main_activity_title">Blupe</string>
+    <string name="main_activity_title">AKit</string>
     <string name="loadmore">Load More</string>
     <string name="loading">Loading</string>
     <string name="pull_to_refresh_pull_label">Pull Refresh</string>

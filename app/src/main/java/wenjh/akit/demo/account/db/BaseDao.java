@@ -43,7 +43,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
         this.tableName = tableName;
         this.db = db;
         log = new LogUtil(getClass().getSimpleName()).closeDebug();
-        log.setMsgPrefix("Blupe SQL**==");
+        log.setMsgPrefix("AKit SQL**==");
     }
 
     /**

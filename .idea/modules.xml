@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AK46.iml" filepath="$PROJECT_DIR$/AK46.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-gif-drawable/AK46-android-gif-drawable.iml" filepath="$PROJECT_DIR$/android-gif-drawable/AK46-android-gif-drawable.iml" />
       <module fileurl="file://$PROJECT_DIR$/picasso/AK46-picasso.iml" filepath="$PROJECT_DIR$/picasso/AK46-picasso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/akit/akit.iml" filepath="$PROJECT_DIR$/akit/akit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/akitdaocompiler/akitdaocompiler.iml" filepath="$PROJECT_DIR$/akitdaocompiler/akitdaocompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-gif-drawable/android-gif-drawable/android-gif-drawable-android-gif-drawable.iml" filepath="$PROJECT_DIR$/android-gif-drawable/android-gif-drawable/android-gif-drawable-android-gif-drawable.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/picasso/picasso/picasso-picasso.iml" filepath="$PROJECT_DIR$/picasso/picasso/picasso-picasso.iml" />
     </modules>

@@ -11,14 +11,19 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.MultiCallback;
 import wenjh.akit.activity.base.MainScreenFragment;
 import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.AvatarAndName;
 import wenjh.akit.common.view.AvatarsLayout;
 import wenjh.akit.common.view.SmartImageView;
 import wenjh.akit.common.view.TagsLayout;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.people.model.User;
 import wenjh.akit.demo.people.ui.UserProfileActivity;
 
 public class AccountProfileFragment extends MainScreenFragment {
@@ -27,9 +32,11 @@ public class AccountProfileFragment extends MainScreenFragment {
 	TextView mAboutTextView = null;
 	TagsLayout mInterestsLayout = null;
 	AvatarsLayout mFriendsLayout = null;
+	User currentUser = null;
 	
 	@Override
 	protected void onCreated(Bundle savedInstanceState) {
+		currentUser = ContextUtil.getCurrentUser();
 		initViews();
 		initEvents();
 		initDatas();
@@ -104,6 +111,18 @@ public class AccountProfileFragment extends MainScreenFragment {
 	protected void initDatas() {
 		refreshMyProfileData();
 		registerMessageReceiver(100, MessageKeys.Action_MyProfileUpdate);
+
+//		try {
+//			MultiCallback multiCallback = new MultiCallback(true);
+//			multiCallback.addView(mAvatarImageView);
+//			GifDrawable gifDrawable = new GifDrawable(getResources(), R.drawable.f002);
+//			mAvatarImageView.setImageDrawable(gifDrawable);
+//			gifDrawable.start();
+//			gifDrawable.setCallback(multiCallback);
+//			log.i("refreshCurrentUserInfo===="+gifDrawable);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 	
 	@Override
@@ -116,8 +135,8 @@ public class AccountProfileFragment extends MainScreenFragment {
 	}
 	
 	private void refreshMyProfileData() {
-		mCoverImageView.loadImageGuid(currentUser.getCover());
-		mAvatarImageView.loadImageGuid(currentUser.getAvatar());
+		mCoverImageView.load(currentUser.getCoverImage());
+		mAvatarImageView.load(currentUser.getAvatarImage());
 		mAboutTextView.setText(currentUser.getAbout());
 		mInterestsLayout.setTags(currentUser.getInterests());
 		if(currentUser.getFriends() != null) {
@@ -125,5 +144,7 @@ public class AccountProfileFragment extends MainScreenFragment {
 		} else {
 			mFriendsLayout.setAvatars(null);
 		}
+
+
 	}
 }

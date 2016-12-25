@@ -17,7 +17,7 @@ import wenjh.akit.common.view.SmartImageView;
 import wenjh.akit.demo.chat.model.MessageServiceWrapper;
 import wenjh.akit.common.util.Image;
 import wenjh.akit.common.util.LogUtil;
-import wenjh.akit.config.StorageConfigs;
+import wenjh.akit.demo.config.StorageConfigs;
 import wenjh.akit.demo.img.ui.ImageBrowserActivity;
 
 import com.squareup.picasso.Picasso.LoadedFrom;

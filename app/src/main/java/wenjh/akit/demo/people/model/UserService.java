@@ -4,9 +4,9 @@ import java.util.List;
 
 import android.database.sqlite.SQLiteDatabase;
 
+import wenjh.akit.demo.ContextUtil;
 import wenjh.akit.demo.account.db.AccountDBOpenHandler;
 import wenjh.akit.demo.account.model.IUserTable;
-import wenjh.akit.common.util.ContextUtil;
 
 public class UserService {
 	private UserDao userDao = null;

@@ -14,7 +14,7 @@
     </style>
 
     <style name="ActionBarStyple" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@color/blupe_green</item>
+        <item name="android:background">@color/akit_green</item>
         <item name="android:divider">@null</item>
     </style>
     
@@ -100,8 +100,7 @@
     <style name="ButtonStyle.DefaultRound" parent="ButtonStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/text_desc</item>
-        <item name="android:background">@drawable/btn_small_round_default</item>
+        <item name="android:textColor">@color/text_desc</item><item name="android:background">@drawable/btn_small_round_default</item>
     </style>
 
     <style name="Style_Title_Label">
@@ -139,15 +138,6 @@
         <item name="android:cacheColorHint">#00000000</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:overScrollMode">never</item>
-    </style>
-
-    <style name="SimpleListView" parent="Style_Scrollable">
-        <item name="android:divider">@color/devideline_listview</item>
-        <item name="android:dividerHeight">0px</item>
-        <item name="android:headerDividersEnabled">false</item>
-        <item name="android:footerDividersEnabled">false</item>
-        <item name="android:persistentDrawingCache">animation|scrolling</item>
-        <item name="android:background">@color/background_normal</item>
     </style>
 
     <style name="CardListView" parent="Style_Scrollable">
@@ -195,7 +185,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:cursorVisible">true</item>
-        <!-- <item name="android:background">@drawable/edittext_default</item> -->
+        <item name="android:background">@drawable/edittext_default</item>
     </style>
 
     <style name="PopListMenu_Item">
@@ -344,7 +334,7 @@
 
     <style name="TopTab_Layout">
         <item name="android:layout_height">40dip</item>
-        <item name="android:background">@color/blupe_green</item>
+        <item name="android:background">@color/akit_green</item>
     </style>
 
     <style name="CardItem_Content">

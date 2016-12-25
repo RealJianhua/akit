@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.List;
 
 import wenjh.akit.activity.base.MainScreenFragment;
+import wenjh.akit.demo.chat.NotificationUtil;
 import wenjh.akit.demo.chat.model.ChatImage;
 import wenjh.akit.demo.chat.model.Message;
 import wenjh.akit.demo.chat.model.MessageServiceWrapper;
@@ -27,10 +28,9 @@ import wenjh.akit.common.asynctask.AsyncCallback;
 import wenjh.akit.common.asynctask.HandyThreadPool;
 import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.DateUtil;
-import wenjh.akit.common.util.NotificationUtil;
 import wenjh.akit.common.util.TakePictureHelper;
 import wenjh.akit.common.view.PullToRefreshListView;
-import wenjh.akit.config.ImageConfigs;
+import wenjh.akit.demo.config.ImageConfigs;
 import wenjh.akit.demo.location.model.LatLng;
 import wenjh.akit.demo.location.model.LocationHelper;
 

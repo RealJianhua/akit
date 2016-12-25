@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="dark_red">#ff8c1c1c</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#ffececec</color>
+    <color name="light_yellow">#fffff99e</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="green">#ff95c81c</color>
+    <color name="orange">#ffefa600</color>
+    <color name="silver">#ffecebe8</color>
+    <color name="gray">#ff7f7f7f</color>
+    <color name="background_normal">#ffffffff</color>
+    <color name="systemsatausbar">#09AF8B</color>
+    <color name="devideline_listview">#ffe5e2d4</color>
+
+    <color name="text_title">#ff5f5f5f</color>
+    <color name="text_content">#ffa19d94</color>
+    <color name="text_desc">#ffbebbb4</color>
+    <color name="text_btn_loadmore">#ffbebbb4</color>
+    <color name="text_highlight">#fff4a900</color>
+
+    <color name="actionbar_spinner_normal">@color/transparent</color>
+    <color name="actionbar_spinner_selected">#5f000000</color>
+    <color name="actionbar_spinner_press">#7f000000</color>
+
+    <color name="bg_warning">#fde1b6</color>
+    <color name="text_warning">#b8956b</color>
+</resources>

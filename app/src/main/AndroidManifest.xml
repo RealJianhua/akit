@@ -20,7 +20,7 @@
         android:targetSdkVersion="23" />
 
     <application
-        android:name="wenjh.akit.AKitApplication"
+        android:name="wenjh.akit.demo.AKitApplicationDemo"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/app_icon_dev"
@@ -98,16 +98,11 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="wenjh.akit.demo.img.crop.CropImageActivity"
-            android:label="@string/crop_image"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="wenjh.akit.demo.account.ui.AccountSettingsActivity"
             android:label="@string/setting"
             android:screenOrientation="portrait" />
 
-        <receiver android:name="wenjh.akit.common.receiver.PhonePowerOnReceiver" >
+        <receiver android:name="wenjh.akit.demo.PhonePowerOnReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

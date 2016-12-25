@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import wenjh.akit.common.receiver.MessageKeys;
-import wenjh.akit.common.util.ContextUtil;
 import wenjh.akit.common.util.LogUtil;
+import wenjh.akit.demo.ContextUtil;
 
 public class MessageServiceWrapper {
 	private LogUtil log = new LogUtil("MessageServiceHelper");
@@ -71,8 +71,8 @@ public class MessageServiceWrapper {
 		peopleMessageService.updateSentMessageReaded(remoteId);
 	}
 
-	public boolean hasReply(String momoid) {
-		return peopleMessageService.hasReply(momoid);
+	public boolean hasReply(String userid) {
+		return peopleMessageService.hasReply(userid);
 	}
 	
 	public boolean exist(String msgid, int type) {

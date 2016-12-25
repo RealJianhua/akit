@@ -13,10 +13,11 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
-import wenjh.akit.config.HostConfigs;
+import wenjh.akit.activity.base.MainScreenFragment;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.config.HostConfigs;
 import wenjh.akit.demo.people.model.User;
 import wenjh.akit.demo.people.UserApi;
-import wenjh.akit.activity.base.MainScreenFragment;
 import wenjh.akit.demo.chat.ui.PeopleChatActivity;
 import wenjh.akit.common.asynctask.BaseTask;
 import wenjh.akit.common.util.StringUtil;
@@ -86,7 +87,7 @@ public class UserProfileFragment extends MainScreenFragment {
 			public void onClick(View v) {
 				Intent intent = new Intent(getActivity(), ImageBrowserActivity.class);
 				if(!mUser.getCover().equals("") && mUser.getCover()!=null){
-				String[] smallImageArray = new String[]{HostConfigs.getImageUrlWithGUID(mUser.getAvatar(),1)}; 
+				String[] smallImageArray = new String[]{HostConfigs.getImageUrlWithGUID(mUser.getAvatar(),1)};
 				String[] largeImageArray = new String[]{HostConfigs.getImageUrlWithGUID(mUser.getAvatar(),3)};
 				intent.putExtra(ImageBrowserActivity.KEY_IMAGEARRAY_SMALL_URL, smallImageArray);
 		        intent.putExtra(ImageBrowserActivity.KEY_IMAGEARRAY_LARGE_URL, largeImageArray);
@@ -99,7 +100,7 @@ public class UserProfileFragment extends MainScreenFragment {
 	
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		if(!currentUser.getId().equals(mUserId)) {
+		if(!ContextUtil.getCurrentUser().getId().equals(mUserId)) {
 			// show report/block menus
 			inflater.inflate(R.menu.userprofile, menu);
 		}
@@ -150,8 +151,8 @@ public class UserProfileFragment extends MainScreenFragment {
 	}
 	
 	private void refreshProfileUI() {
-		mCoverImageView.loadImageGuid(mUser.getCover());
-		mAvatarImageView.loadImageGuid(mUser.getAvatar());
+		mCoverImageView.load(mUser.getCoverImage());
+		mAvatarImageView.load(mUser.getAvatarImage());
 		mAboutTextView.setText(mUser.getAbout());
 		mInterestsLayout.setTags(mUser.getInterests());
 		if(!StringUtil.isEmpty(mUser.getDisplayName())) {
@@ -160,7 +161,7 @@ public class UserProfileFragment extends MainScreenFragment {
 			getActionBar().setTitle("");
 		}
 		
-		boolean canChat = mUser.canChat() && !mUserId.equals(currentUser.getId());
+		boolean canChat = mUser.canChat() && !mUserId.equals(ContextUtil.getCurrentUser().getId());
 		mChatButton.setVisibility(canChat ? View.VISIBLE : View.GONE);
 	}
 	

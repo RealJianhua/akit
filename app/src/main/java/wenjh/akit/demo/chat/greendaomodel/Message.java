@@ -16,7 +16,7 @@ import wenjh.akit.demo.maintab.Community;
 import wenjh.akit.demo.location.model.LatLng;
 import wenjh.akit.demo.people.model.User;
 
-@Entity
+//@Entity
 public class Message {
 	public static final int STATUS_SENDING = 1;
 	public static final int STATUS_SEND_SUCCESSFUL = 2;
@@ -39,8 +39,8 @@ public class Message {
 	private int chatType = CHATTYPE_PEOPLE;
 	private int contentType = CONTENTTYPE_MESSAGE_TEXT;
 	private int status = STATUS_SENDING;
-	@Id
-	private long id;
+	@Id(autoincrement = true)
+	private Long id;
 	@Index(unique = true)
 	private String msgId;
 	private String communityId = null;

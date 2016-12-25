@@ -5,10 +5,10 @@ import java.util.List;
 import android.database.sqlite.SQLiteDatabase;
 
 import wenjh.akit.common.util.StringUtil;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.chat.NotificationUtil;
 import wenjh.akit.demo.people.model.UserDao;
-import wenjh.akit.common.util.ContextUtil;
 import wenjh.akit.common.util.LogUtil;
-import wenjh.akit.common.util.NotificationUtil;
 
 public class ChatSessionService {
 	private PeopleMessageService peopleMessageService = null;

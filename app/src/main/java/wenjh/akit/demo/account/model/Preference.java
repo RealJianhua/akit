@@ -6,8 +6,8 @@ import android.content.Context;
 import android.content.SharedPreferences.Editor;
 
 import wenjh.akit.common.util.SharedPreferencesUtil;
+import wenjh.akit.demo.ContextUtil;
 import wenjh.akit.demo.people.model.User;
-import wenjh.akit.common.util.ContextUtil;
 
 public class Preference {
 	SharedPreferencesUtil p = null;

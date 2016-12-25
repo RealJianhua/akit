@@ -5,12 +5,14 @@ import java.io.File;
 import android.net.Uri;
 
 import wenjh.akit.common.util.StringUtil;
-import wenjh.akit.config.HostConfigs;
 import wenjh.akit.common.util.Image;
+import wenjh.akit.demo.account.DemoImage;
+import wenjh.akit.demo.config.HostConfigs;
 
 public class ChatImage extends Image {
 	public long totalByteSize = 0;
 	public long uplodedByteSize = 0;
+	private String imageGuid;
 	
 	public ChatImage() {
 	}
@@ -25,17 +27,21 @@ public class ChatImage extends Image {
 	}
 	
 	public boolean isUploadSuccess() {
-		return !StringUtil.isEmpty(getImageGuid());
+		return !StringUtil.isEmpty(imageGuid);
 	}
 	
-	@Override
-	public void setImageGuid(String imageGuid, int size) {
-		super.setImageGuid(imageGuid, size);
+	void setImageGuid(String imageGuid, int size) {
+		this.imageGuid = imageGuid;
 		if(!StringUtil.isEmpty(imageGuid)) {
 			String imageUrl = HostConfigs.getChatImageUrlWithGUID(imageGuid, size);
 			setImageURL(imageUrl);
 		}
 	}
+
+	public void setImageGuid(String imageGuid) {
+		setImageGuid(imageGuid, 2);
+	}
+
 	
 	@Override
 	public Uri getImageUri() {
@@ -43,8 +49,8 @@ public class ChatImage extends Image {
 	}
 	
 	public String getSmallImageUri() {
-		if(!StringUtil.isEmpty(getImageGuid())) {
-			return HostConfigs.getChatImageUrlWithGUID(getImageGuid(), 2);
+		if(!StringUtil.isEmpty(imageGuid)) {
+			return HostConfigs.getChatImageUrlWithGUID(imageGuid, 2);
 		} else {
 			Uri uri = getImageUri();
 			return uri != null ? uri.toString() : null;
@@ -52,12 +58,15 @@ public class ChatImage extends Image {
 	}
 	
 	public String getBigImageUri() {
-		if(!StringUtil.isEmpty(getImageGuid())) {
-			return HostConfigs.getChatImageUrlWithGUID(getImageGuid(), 3);
+		if(!StringUtil.isEmpty(imageGuid)) {
+			return HostConfigs.getChatImageUrlWithGUID(imageGuid, 3);
 		} else {
 			Uri uri = getImageUri();
 			return uri != null ? uri.toString() : null;
 		}
 	}
 
+	public String getImageGuid() {
+		return imageGuid;
+	}
 }

@@ -2,7 +2,6 @@ package wenjh.akit.demo.location.model;
 
 import java.util.Date;
 
-
 public class LatLng {
 	private double latitude = -1;
 	private double longitude = -1;

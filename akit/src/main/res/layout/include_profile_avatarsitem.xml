@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+	<wenjh.akit.common.view.CircleImageView
+	    android:id="@id/imageview"
+	    android:layout_width="@dimen/avatar"
+	    android:layout_height="@dimen/avatar"
+	    />
+	<wenjh.akit.common.view.EmoteTextView
+	    android:id="@id/textview"
+	    android:layout_width="@dimen/avatar"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/text_content"
+	    android:textSize="@dimen/text_view_content"
+	    android:layout_marginTop="5dip"
+	    android:gravity="center"
+	    android:singleLine="true"
+	    android:ellipsize="end"
+	    />
+</LinearLayout>

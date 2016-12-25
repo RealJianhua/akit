@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.wenjh.akit.R;
 
 import wenjh.akit.activity.base.TransparentActionBarActivity;
+import wenjh.akit.demo.ContextUtil;
 
 public class SplashActivity extends TransparentActionBarActivity {
 	private static final String FACEBOOK_FRAGMENT_TAG = "facebook_fragment";
@@ -19,7 +20,7 @@ public class SplashActivity extends TransparentActionBarActivity {
 		initEvents();
 		initDatas();
 
-		if (getApp().isOnline()) {
+		if (ContextUtil.getApp().isOnline()) {
 			initOnlineActivity();
 		} else {
 			initOfflineActivity();
@@ -48,8 +49,4 @@ public class SplashActivity extends TransparentActionBarActivity {
 
 	@Override
 	protected void initDatas() {}
-	
-	@Override
-	public void onAccountLogout() {
-	}
 }

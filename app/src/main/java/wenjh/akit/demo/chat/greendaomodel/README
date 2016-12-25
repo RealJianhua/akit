@@ -1,2 +1,2 @@
 chat/model 目录里，是用普通的dbhandler来处理数据库的
-greendao里，用greendao来orm
+greendaomodel里，用greendao orm

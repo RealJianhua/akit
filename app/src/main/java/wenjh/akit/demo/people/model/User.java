@@ -1,8 +1,13 @@
 package wenjh.akit.demo.people.model;
 
+import android.net.Uri;
+
 import java.util.List;
 
 import wenjh.akit.common.util.AvatarAndName;
+import wenjh.akit.common.util.Image;
+import wenjh.akit.common.util.StringUtil;
+import wenjh.akit.demo.account.DemoImage;
 
 public class User implements AvatarAndName {
 	private String id;
@@ -10,6 +15,8 @@ public class User implements AvatarAndName {
 	private String avatar;
 	private String cover = "";
 	private String about = "";
+	private DemoImage coverImage;
+	private DemoImage avatarImage;
 	private List<String> interests;
 	private int age;
 	private UserGender gender;
@@ -42,16 +49,46 @@ public class User implements AvatarAndName {
 		return avatar;
 	}
 
+	public Image getAvatarImage() {
+		return avatarImage;
+	}
+
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
+		if(StringUtil.isEmpty(avatar)) {
+			if(avatarImage != null) {
+				avatarImage.setImageGuid(null);
+			}
+			avatarImage = null;
+		} else {
+			if(avatarImage == null) {
+				avatarImage = new DemoImage();
+			}
+			avatarImage.setImageGuid(avatar);
+		}
 	}
 
 	public String getCover() {
 		return cover;
 	}
 
+	public Image getCoverImage() {
+		return coverImage;
+	}
+
 	public void setCover(String cover) {
 		this.cover = cover;
+		if(StringUtil.isEmpty(cover)) {
+			if(coverImage != null) {
+				coverImage.setImageGuid(null);
+			}
+			coverImage = null;
+		} else {
+			if(coverImage == null) {
+				coverImage = new DemoImage();
+			}
+			coverImage.setImageGuid(cover);
+		}
 	}
 
 	public String getAbout() {

@@ -3,6 +3,9 @@ package wenjh.akit.demo.maintab;
 import java.io.Serializable;
 
 import wenjh.akit.common.util.AvatarAndName;
+import wenjh.akit.common.util.Image;
+import wenjh.akit.common.util.StringUtil;
+import wenjh.akit.demo.account.DemoImage;
 
 public class Community implements AvatarAndName, Serializable {
 	public static final int RELATION_NONE = 0;
@@ -13,6 +16,7 @@ public class Community implements AvatarAndName, Serializable {
 
 	private String name = "";
 	private String cover = "";
+	private DemoImage coverImage = null;
 	private String cid = "";
 	private String createtime = "";
 	private float distance;
@@ -48,8 +52,23 @@ public class Community implements AvatarAndName, Serializable {
 		return cover;
 	}
 
+	public DemoImage getCoverImage() {
+		return coverImage;
+	}
+
 	public void setCover(String cover) {
 		this.cover = cover;
+		if(StringUtil.isEmpty(cover)) {
+			if(coverImage != null) {
+				coverImage.setImageGuid(null);
+			}
+			coverImage = null;
+		} else {
+			if(coverImage == null) {
+				coverImage = new DemoImage();
+			}
+			coverImage.setImageGuid(cover);
+		}
 	}
 
 	public String getId() {
@@ -101,13 +120,13 @@ public class Community implements AvatarAndName, Serializable {
 		this.max_member = max_member;
 	}
 
-	public String getDisplayName() {
-		return name == null ? "" : name;
+	@Override
+	public Image getAvatarImage() {
+		return coverImage;
 	}
 
-	@Override
-	public String getAvatar() {
-		return getCover();
+	public String getDisplayName() {
+		return name == null ? "" : name;
 	}
 
 	@Override

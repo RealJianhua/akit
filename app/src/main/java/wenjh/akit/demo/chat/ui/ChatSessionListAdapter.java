@@ -47,7 +47,7 @@ public class ChatSessionListAdapter extends BaseListAdapter<ChatSession> {
 		ChatSession chatSession = getItem(position);
 		
 		holder.avatarImageView.setTag(position);
-		holder.avatarImageView.loadImageGuid(chatSession.getAvatar());
+		holder.avatarImageView.load(chatSession.getAvatarImage());
 		holder.contentView.setText(chatSession.getTextContent());
 		holder.titleView.setText(chatSession.getDisplayName());
 		

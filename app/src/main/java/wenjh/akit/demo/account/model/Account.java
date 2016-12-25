@@ -2,8 +2,8 @@ package wenjh.akit.demo.account.model;
 
 import java.util.Date;
 
+import wenjh.akit.demo.ContextUtil;
 import wenjh.akit.demo.location.model.LatLng;
-import wenjh.akit.common.util.ContextUtil;
 import wenjh.akit.demo.location.model.LocationHelper;
 import wenjh.akit.demo.people.model.User;
 

@@ -7,7 +7,7 @@
 	    android:id="@+id/login_btn_login"
 	    android:layout_width="200dip"
 	    android:layout_height="wrap_content"
-	    android:text="Login Momo"
+	    android:text="Login AKit"
 	    android:layout_centerInParent="true"
 	    />
 </RelativeLayout>

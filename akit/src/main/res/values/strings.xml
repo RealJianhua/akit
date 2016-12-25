@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Akit</string>
+    <string name="network_error_client">process failed</string>
+    <string name="network_error_data">data parse failed</string>
+    <string name="network_error_other">network failed</string>
+    <string name="network_error_unavailable">network unavaliable</string>
+    <string name="network_error_timeout">network timeout</string>
+    <string name="loadmore">Load More</string>
+    <string name="loading">Loading</string>
+    <string name="pull_to_refresh_pull_label">Pull Refresh</string>
+    <string name="pull_to_refresh_release_label">Release Refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pullrefreshlist_lastTime">Last Time:</string>
+    <string name="dialog_btn_cancel">Cancel</string>
+    <string name="dialog_btn_confirm">Confirm</string>
+    <string name="dialog_title">Alert</string>
+    <string name="error_no_camera">No camera</string>
+    <string name="error_photoalbum">No Photo album</string>
+    <string name="choose_picture">Choose</string>
+    <string name="error_compress_failed">compress failed</string>
+    <string name="error_locate_failed">locate failed</string>
+    <string name="progress">progress ...</string>
+    <string name="crop_image">Crop Image</string>
+
+</resources>

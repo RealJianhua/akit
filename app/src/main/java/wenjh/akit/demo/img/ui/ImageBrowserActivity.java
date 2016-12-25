@@ -28,11 +28,11 @@ import wenjh.akit.common.view.MProgressDialog;
 import wenjh.akit.common.view.ScrollViewPager;
 import wenjh.akit.common.view.Toaster;
 import wenjh.akit.common.view.photoview.PhotoView;
-import wenjh.akit.config.StorageConfigs;
 import wenjh.akit.common.asynctask.BaseTask;
-import wenjh.akit.common.util.ContextUtil;
 import wenjh.akit.common.util.LogUtil;
 import wenjh.akit.common.util.PicassoUtil;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.config.StorageConfigs;
 
 import com.squareup.picasso.MemoryPolicy;
 import com.wenjh.akit.R;
@@ -145,7 +145,8 @@ public class ImageBrowserActivity extends TransparentActionBarActivity {
 		}
 
 		this.mImageList = images;
-		
+		log.i(images);
+
 		mAdapter = new ImageItemViewAdapter();
 		mViewPager.setAdapter(mAdapter);
 		mViewPager.setCurrentItem(index, false);
@@ -282,6 +283,11 @@ public class ImageBrowserActivity extends TransparentActionBarActivity {
 	private static class ImageItem {
 		String largeUrl;
 		String thumbUrl;
+
+		@Override
+		public String toString() {
+			return "largeUrl:"+largeUrl+", thumbUrl:"+thumbUrl;
+		}
 	}
 
 	private class SaveImageToLocalTask extends BaseTask<Object, Object, Boolean> {

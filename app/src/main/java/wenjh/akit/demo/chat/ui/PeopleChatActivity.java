@@ -3,6 +3,7 @@ package wenjh.akit.demo.chat.ui;
 import android.os.Bundle;
 
 import com.wenjh.akit.R;
+
 import wenjh.akit.activity.base.BaseActivity;
 import wenjh.akit.demo.chat.model.ChatSession;
 

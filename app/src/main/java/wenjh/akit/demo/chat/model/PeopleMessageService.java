@@ -6,7 +6,7 @@ import java.util.List;
 import android.database.sqlite.SQLiteDatabase;
 
 import wenjh.akit.common.util.StringUtil;
-import wenjh.akit.common.util.ContextUtil;
+import wenjh.akit.demo.ContextUtil;
 
 public class PeopleMessageService  {
 	private PeopleMessageDao msgDao = null;
@@ -70,20 +70,20 @@ public class PeopleMessageService  {
 		}
 	}
 
-	public boolean hasReply(String momoid) {
+	public boolean hasReply(String userid) {
 		return msgDao.count(new String[] { IMessageTable.F_RemoteUserId, IMessageTable.F_Received }, 
-				new String[] { momoid, 0 + "" }) > 0;
+				new String[] { userid, 0 + "" }) > 0;
 	}
 
-	public Message getLastMessage(String momoid) {
+	public Message getLastMessage(String userid) {
 		return msgDao.max(IMessageTable.F_MessageTime, 
 				new String[] { IMessageTable.F_RemoteUserId }, 
-				new String[] { momoid });
+				new String[] { userid });
 	}
 
-	public String getLastMessageId(String momoid) {
+	public String getLastMessageId(String userid) {
 		return msgDao.maxField(IMessageTable.F_MessageID, IMessageTable.F_MessageTime, 
-				new String[] { IMessageTable.F_RemoteUserId }, new String[] { momoid });
+				new String[] { IMessageTable.F_RemoteUserId }, new String[] { userid });
 	}
 
 	public void updateAllReceivedMessageReaded() {
@@ -207,33 +207,33 @@ public class PeopleMessageService  {
 		return msgDao.getAll(IMessageTable.F_MessageTime, true);
 	}
 
-	public List<Message> findMessageByRemoteId(String momoId) {
+	public List<Message> findMessageByRemoteId(String userid) {
 		List<Message> list = msgDao.list(
 				new String[] { IMessageTable.F_RemoteUserId }, 
-				new String[] { momoId }, IMessageTable.F_MessageTime, true);
+				new String[] { userid }, IMessageTable.F_MessageTime, true);
 		return list;
 	}
 
-	public List<Message> findMessageByRemoteId(String momoId, int startIndex, int offset) {
+	public List<Message> findMessageByRemoteId(String userid, int startIndex, int offset) {
 		List<Message> list = msgDao.list(
 				new String[] { IMessageTable.F_RemoteUserId + "" }, 
-				new String[] { momoId }, IMessageTable.F_MessageTime, false,
+				new String[] { userid }, IMessageTable.F_MessageTime, false,
 				startIndex, offset);
 		Collections.reverse(list);
 		return list;
 	}
 
-	public List<Message> findMessageWithRemoteIdAndContentType(String momoId, int contentType) {
+	public List<Message> findMessageWithRemoteIdAndContentType(String userid, int contentType) {
 		List<Message> list = msgDao.list(
 				new String[] { IMessageTable.F_RemoteUserId, IMessageTable.F_ContentType }, 
-				new String[] { momoId, contentType + "" }, IMessageTable.F_MessageTime, true);
+				new String[] { userid, contentType + "" }, IMessageTable.F_MessageTime, true);
 		return list;
 	}
 
-	public List<Message> findMessageByRemoteIdAsc(String momoId, int startIndex, int offset) {
+	public List<Message> findMessageByRemoteIdAsc(String userid, int startIndex, int offset) {
 		List<Message> list = msgDao.list(
 				new String[] { IMessageTable.F_RemoteUserId + "" }, 
-				new String[] { momoId }, IMessageTable.F_MessageTime, true,
+				new String[] { userid }, IMessageTable.F_MessageTime, true,
 				startIndex, offset);
 		return list;
 	}
@@ -267,28 +267,28 @@ public class PeopleMessageService  {
 		}
 	}
 
-	public void deleteByRemoteId(String momoId, boolean deleteSession) {
-		msgDao.delete(IMessageTable.F_RemoteUserId, momoId);
+	public void deleteByRemoteId(String userid, boolean deleteSession) {
+		msgDao.delete(IMessageTable.F_RemoteUserId, userid);
 		if (deleteSession) {
-			sessionDao.delete(momoId);
+			sessionDao.delete(userid);
 		} else {
-			sessionDao.updateFiled(IChatSessionTable.F_LastMessage, "", momoId);
+			sessionDao.updateFiled(IChatSessionTable.F_LastMessage, "", userid);
 		}
 	}
 
-	public void deleteByRemoteIds(String[] momoids, boolean deleteSessions) {
-		deleteByRemoteIds(momoids);
+	public void deleteByRemoteIds(String[] userids, boolean deleteSessions) {
+		deleteByRemoteIds(userids);
 		if (deleteSessions) {
-			sessionDao.delelteIn(IChatSessionTable.F_SessionID, momoids);
+			sessionDao.delelteIn(IChatSessionTable.F_SessionID, userids);
 		}
 	}
 
-	public void deleteByRemoteIds(String[] momoids) {
-		msgDao.delelteIn(IMessageTable.F_MessageID, momoids);
+	public void deleteByRemoteIds(String[] userids) {
+		msgDao.delelteIn(IMessageTable.F_MessageID, userids);
 	}
 
-	public boolean hasUnreadedByUserId(String momoid) {
-		return getUnreadedCountByRemoteid(momoid) > 0;
+	public boolean hasUnreadedByUserId(String userid) {
+		return getUnreadedCountByRemoteid(userid) > 0;
 	}
 
 	public int getUnreadedMessageCount() {
@@ -296,11 +296,11 @@ public class PeopleMessageService  {
 		return c;
 	}
 
-	public int getUnreadedCountByRemoteids(String[] momoids) {
-		if (momoids == null || momoids.length <= 0) {
+	public int getUnreadedCountByRemoteids(String[] userids) {
+		if (userids == null || userids.length <= 0) {
 			return 0;
 		}
-		return msgDao.countIn(IMessageTable.F_RemoteUserId, momoids, 
+		return msgDao.countIn(IMessageTable.F_RemoteUserId, userids,
 				new String[] { IMessageTable.F_Status }, 
 				new String[] { Message.STATUS_RECEIVE_UNREADED + "" });
 	}
@@ -311,37 +311,37 @@ public class PeopleMessageService  {
 		}
 	}
 
-	public void updateMessagesStatusByUserIds(String[] momoids, int newStatus, int oldStatus) {
-		if (momoids != null && momoids.length > 0) {
-			msgDao.updateIn(IMessageTable.F_Status, newStatus, oldStatus, IMessageTable.F_RemoteUserId, momoids);
+	public void updateMessagesStatusByUserIds(String[] userids, int newStatus, int oldStatus) {
+		if (userids != null && userids.length > 0) {
+			msgDao.updateIn(IMessageTable.F_Status, newStatus, oldStatus, IMessageTable.F_RemoteUserId, userids);
 		}
 	}
 
-	public void updateMessagesStatusByUserId(String momoid, int newStatus, int oldStatus) {
+	public void updateMessagesStatusByUserId(String userid, int newStatus, int oldStatus) {
 		msgDao.updateFiled(new String[] { IMessageTable.F_Status }, new String[] { newStatus + "" }, 
 				new String[] { IMessageTable.F_RemoteUserId, IMessageTable.F_Status }, 
-				new String[] { momoid, oldStatus + "" });
+				new String[] { userid, oldStatus + "" });
 	}
 
-	public void updateMessagesStatusByUserId(String[] momoids, int status) {
-		if (momoids != null && momoids.length > 0) {
-			msgDao.updateIn(IMessageTable.F_Status, status, IMessageTable.F_RemoteUserId, momoids);
+	public void updateMessagesStatusByUserId(String[] userids, int status) {
+		if (userids != null && userids.length > 0) {
+			msgDao.updateIn(IMessageTable.F_Status, status, IMessageTable.F_RemoteUserId, userids);
 		}
 	}
 
-	public int getUnreadedCountByRemoteid(String momoid) {
+	public int getUnreadedCountByRemoteid(String userid) {
 		int c = msgDao.count(new String[] { IMessageTable.F_RemoteUserId, IMessageTable.F_Status }, 
-				new String[] { momoid, Message.STATUS_RECEIVE_UNREADED + "" });
+				new String[] { userid, Message.STATUS_RECEIVE_UNREADED + "" });
 		return c;
 	}
 
-	public int getReciveMessageCountByRemoteid(String momoid) {
+	public int getReciveMessageCountByRemoteid(String userid) {
 		return msgDao.count(new String[] { IMessageTable.F_RemoteUserId, IMessageTable.F_Received }, 
-				new String[] { momoid, 1 + "" });
+				new String[] { userid, 1 + "" });
 	}
 
-	public int getMessageCountRemoteid(String momoid) {
-		return msgDao.count(new String[] { IMessageTable.F_RemoteUserId }, new String[] { momoid });
+	public int getMessageCountRemoteid(String userid) {
+		return msgDao.count(new String[] { IMessageTable.F_RemoteUserId }, new String[] { userid });
 	}
 	
 	public void clear() {

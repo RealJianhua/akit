@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.wenjh.akit.R;
 
+import wenjh.akit.demo.ContextUtil;
 import wenjh.akit.demo.account.AccountApi;
 import wenjh.akit.demo.account.model.Account;
 import wenjh.akit.activity.base.BaseFragment;
@@ -40,7 +41,7 @@ public class LoginAccountFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				mAccountInfo.setDeviceId(Secure.getString(getActivity().getContentResolver(), Secure.ANDROID_ID));
-				execAsyncTask(new LoginBlupeTask(getActivity()));
+				execAsyncTask(new LoginTask(getActivity()));
 			}
 		});
 	}
@@ -50,8 +51,8 @@ public class LoginAccountFragment extends BaseFragment {
 		
 	}
 
-	private class LoginBlupeTask extends BaseTask<Object, Object, Object> {
-		public LoginBlupeTask(Context context) {
+	private class LoginTask extends BaseTask<Object, Object, Object> {
+		public LoginTask(Context context) {
 			super(context);
 		}
 		
@@ -78,7 +79,7 @@ public class LoginAccountFragment extends BaseFragment {
 		@Override
 		protected void onTaskSuccess(Object result) {
 			super.onTaskSuccess(result);
-			getApp().login(mAccountInfo);
+			ContextUtil.getApp().login(mAccountInfo);
 			log.d("session:" + mAccountInfo.getSessionId()+", loginuser="+mAccountInfo.getAccountUser());
 			Intent intent = new Intent(getContext(), MainTabActivity.class);
 			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);

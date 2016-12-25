@@ -13,18 +13,22 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
-import wenjh.akit.demo.maintab.SplashActivity;
 import wenjh.akit.activity.base.BaseActivity;
 import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.view.HoursPickerDialog;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.account.model.AccountSettingPreference;
+import wenjh.akit.demo.maintab.SplashActivity;
 
 public class AccountSettingsActivity extends BaseActivity {
 	private Switch mNotificationSwitch;
 	private TextView  mLogoutView;
+	AccountSettingPreference userPreference = null;
 	
 	@Override
 	protected void onActivityCreated(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_account_settings);
+		userPreference = ContextUtil.getCurrentPreference();
 		initViews();
 		initEvents();
 		initDatas();
@@ -83,7 +87,7 @@ public class AccountSettingsActivity extends BaseActivity {
 		mLogoutView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				getApp().logout();
+				ContextUtil.getApp().logout();
 				Intent i = new Intent(getApplicationContext(), SplashActivity.class);
 				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(i);

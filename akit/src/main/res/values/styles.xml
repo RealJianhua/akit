@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="ShadowedText">
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">-1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+
+    <style name="ShadowedText.Light" parent="@style/ShadowedText">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#ff555555</item>
+    </style>
+
+    <style name="Style_Scrollable">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="SimpleListView" parent="Style_Scrollable">
+        <item name="android:divider">@color/devideline_listview</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:persistentDrawingCache">animation|scrolling</item>
+        <item name="android:background">@color/background_normal</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="@android:style/Widget.Holo.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_content</item>
+        <item name="android:background">@drawable/btn_default</item>
+    </style>
+
+    <style name="LoadMoreButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">42dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/btn_loadmore</item>
+    </style>
+
+    <style name="TagTextItem">
+        <item name="android:background">@drawable/bg_tagitem</item>
+        <item name="android:textColor">@color/text_content</item>
+        <item name="android:textSize">@dimen/text_view_content</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+    </style>
+
+    <style name="Selectable">
+        <item name="android:background">?android:attr/listChoiceBackgroundIndicator</item>
+    </style>
+
+</resources>

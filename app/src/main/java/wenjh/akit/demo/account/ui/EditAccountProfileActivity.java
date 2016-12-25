@@ -12,8 +12,9 @@ import android.widget.EditText;
 
 import com.wenjh.akit.R;
 
-import wenjh.akit.demo.account.model.AccountSettingPreference;
 import wenjh.akit.activity.base.BaseActivity;
+import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.account.model.AccountSettingPreference;
 import wenjh.akit.common.http.NetworkBaseException;
 import wenjh.akit.common.http.RangeUploadHandler;
 import wenjh.akit.common.receiver.MessageKeys;
@@ -21,13 +22,12 @@ import wenjh.akit.common.util.StringUtil;
 import wenjh.akit.common.util.TakePictureHelper;
 import wenjh.akit.common.view.MProgressDialog;
 import wenjh.akit.common.view.SmartImageView;
-import wenjh.akit.config.ImageConfigs;
+import wenjh.akit.demo.config.ImageConfigs;
 import wenjh.akit.demo.people.UserApi;
 import wenjh.akit.demo.people.model.User;
 import wenjh.akit.demo.people.model.UserService;
 import wenjh.akit.common.asynctask.AsyncCallback;
 import wenjh.akit.common.asynctask.BaseTask;
-import wenjh.akit.common.util.ContextUtil;
 import wenjh.akit.common.view.TagsEditText;
 
 public class EditAccountProfileActivity extends BaseActivity {
@@ -43,6 +43,8 @@ public class EditAccountProfileActivity extends BaseActivity {
 	private RangeUploadHandler.ResumableUploadData mEditAvatarData;
 	private TakePictureHelper mTakeCoverPictureHelper;
 	private TakePictureHelper mTakeAvatarPictureHelper;
+	private User currentUser;
+	private AccountSettingPreference userPreference;
 	
 	// TODO check change
 	
@@ -51,6 +53,8 @@ public class EditAccountProfileActivity extends BaseActivity {
 		setContentView(R.layout.activity_editaccountprofile);
 		mTakeCoverPictureHelper = new TakePictureHelper(this);
 		mTakeAvatarPictureHelper = new TakePictureHelper(this);
+		currentUser = ContextUtil.getCurrentUser();
+		userPreference = ContextUtil.getCurrentPreference();
 		initViews();
 		initEvents();
 		initDatas();
@@ -115,7 +119,7 @@ public class EditAccountProfileActivity extends BaseActivity {
 		if(mEditAvatarData != null) {
 			mAvatarImageView.load(mEditAvatarData.file);
 		} else {
-			mAvatarImageView.loadImageGuid(mEditUser.getAvatar());
+			mAvatarImageView.load(mEditUser.getAvatarImage());
 		}
 	}
 	
@@ -123,7 +127,7 @@ public class EditAccountProfileActivity extends BaseActivity {
 		if(mEditCoverData != null) {
 			mCoverImageView.load(mEditCoverData.file);
 		} else {
-			mCoverImageView.loadImageGuid(mEditUser.getCover());
+			mCoverImageView.load(mEditUser.getCoverImage());
 		}
 	}
 	
