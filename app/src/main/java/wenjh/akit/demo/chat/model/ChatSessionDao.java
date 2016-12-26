@@ -6,7 +6,7 @@ import java.util.Map;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import wenjh.akit.demo.account.db.BaseDao;
+import wenjh.akit.common.db.BaseDao;
 
 public class ChatSessionDao extends BaseDao<ChatSession, String> implements IChatSessionTable {
 

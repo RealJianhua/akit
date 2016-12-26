@@ -1,4 +1,4 @@
-package wenjh.akit.demo.account.db;
+package wenjh.akit.common.db;
 
 public interface ITable {
 	public final static String DBFIELD_TMP = "field";

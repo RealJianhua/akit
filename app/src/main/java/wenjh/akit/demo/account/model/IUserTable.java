@@ -1,6 +1,6 @@
 package wenjh.akit.demo.account.model;
 
-import wenjh.akit.demo.account.db.ITable;
+import wenjh.akit.common.db.ITable;
 
 public interface IUserTable extends ITable {
 	String TableName = "users";

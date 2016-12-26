@@ -9,8 +9,8 @@ import org.json.JSONObject;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import wenjh.akit.common.db.BaseDao;
 import wenjh.akit.demo.location.model.LatLng;
-import wenjh.akit.demo.account.db.BaseDao;
 import wenjh.akit.common.util.StringUtil;
 
 public abstract class AbsMessageDao extends BaseDao<Message, String> implements IMessageTable {

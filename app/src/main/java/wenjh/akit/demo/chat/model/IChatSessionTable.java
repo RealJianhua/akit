@@ -1,6 +1,6 @@
 package wenjh.akit.demo.chat.model;
 
-import wenjh.akit.demo.account.db.ITable;
+import wenjh.akit.common.db.ITable;
 
 public interface IChatSessionTable extends ITable {
 	String TableName = "chatsessions";

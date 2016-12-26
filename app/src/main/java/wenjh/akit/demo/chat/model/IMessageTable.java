@@ -1,6 +1,6 @@
 package wenjh.akit.demo.chat.model;
 
-import wenjh.akit.demo.account.db.ITable;
+import wenjh.akit.common.db.ITable;
 
 public interface IMessageTable extends ITable {
 	String PeopleTableName = "pep_messages";

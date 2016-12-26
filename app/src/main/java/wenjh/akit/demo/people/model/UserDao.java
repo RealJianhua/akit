@@ -12,8 +12,8 @@ import org.json.JSONObject;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import wenjh.akit.common.db.BaseDao;
 import wenjh.akit.demo.account.model.IUserTable;
-import wenjh.akit.demo.account.db.BaseDao;
 import wenjh.akit.common.util.StringUtil;
 
 public class UserDao extends BaseDao<User, String> implements IUserTable {

@@ -1,4 +1,4 @@
-package wenjh.akit.demo.account.db;
+package wenjh.akit.common.db;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
