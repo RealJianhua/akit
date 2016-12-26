@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.chat.model.Message;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.demo.chat.model.ChatSession;
 import wenjh.akit.demo.chat.model.ChatSessionService;
 import wenjh.akit.demo.maintab.Community;

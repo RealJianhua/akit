@@ -4,10 +4,10 @@ import java.util.Date;
 
 import android.os.Bundle;
 
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.AvatarAndName;
 import wenjh.akit.common.util.DateUtil;
 import wenjh.akit.common.util.Image;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.maintab.Community;
 import wenjh.akit.demo.people.model.User;
 

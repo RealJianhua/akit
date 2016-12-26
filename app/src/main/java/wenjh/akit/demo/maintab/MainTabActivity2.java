@@ -7,15 +7,12 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
-import java.io.IOException;
-
-import pl.droidsonroids.gif.GifDrawable;
 import wenjh.akit.activity.base.ActivityHandler;
 import wenjh.akit.activity.base.ActivityHandler.ApplicationEventListener;
 import wenjh.akit.activity.base.ScrollTabGroupActivity;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.view.SmartImageView;
 import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.account.AccountApi;
 import wenjh.akit.demo.account.ui.AccountProfileFragment;
 import wenjh.akit.demo.chat.ui.ChatSessionListFragment;

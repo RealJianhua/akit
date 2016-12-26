@@ -20,13 +20,13 @@ import java.util.Date;
 import java.util.List;
 
 import wenjh.akit.activity.base.MainScreenFragment;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.chat.NotificationUtil;
 import wenjh.akit.demo.chat.model.ChatImage;
 import wenjh.akit.demo.chat.model.Message;
 import wenjh.akit.demo.chat.model.MessageServiceWrapper;
 import wenjh.akit.common.asynctask.AsyncCallback;
 import wenjh.akit.common.asynctask.HandyThreadPool;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.DateUtil;
 import wenjh.akit.common.util.TakePictureHelper;
 import wenjh.akit.common.view.PullToRefreshListView;

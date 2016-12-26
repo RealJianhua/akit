@@ -5,9 +5,9 @@ import java.util.List;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.LogUtil;
 import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.MessageKeys;
 
 public class MessageServiceWrapper {
 	private LogUtil log = new LogUtil("MessageServiceHelper");

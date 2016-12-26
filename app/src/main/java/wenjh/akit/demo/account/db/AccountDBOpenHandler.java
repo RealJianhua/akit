@@ -43,19 +43,19 @@ public class AccountDBOpenHandler extends AKitDBOpenHandler {
 				.primaryKey(IUserTable.F_UserId, FieldType.Varchar)
 				.tempFieldCount(50)
 				.build();
-
-		newTableBuilder("test1")
-				.primaryKey("v1", FieldType.Integer)
-				.autoincrement(true)
-				.build();
-		newTableBuilder("test2")
-				.primaryKey("v2", FieldType.Integer)
-				.tempFieldCount(55)
-				.build();
-		newTableBuilder("test3")
-			.newIndexBuilder().nameField(ITable.DBFIELD_TMP+"2").nameIndex("_vi3").unique(true).build()
-			.build();
-		newTableBuilder("test4").tempFieldCount(0)
-				.build();
+// demo
+//		newTableBuilder("test1")
+//				.primaryKey("v1", FieldType.Integer)
+//				.autoincrement(true)
+//				.build();
+//		newTableBuilder("test2")
+//				.primaryKey("v2", FieldType.Integer)
+//				.tempFieldCount(55)
+//				.build();
+//		newTableBuilder("test3")
+//			.newIndexBuilder().nameField(ITable.DBFIELD_TMP+"2").nameIndex("_vi3").unique(true).build()
+//			.build();
+//		newTableBuilder("test4").tempFieldCount(0)
+//				.build();
 	}
 }

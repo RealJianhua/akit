@@ -11,18 +11,15 @@ import android.widget.TextView;
 
 import com.wenjh.akit.R;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-import pl.droidsonroids.gif.GifDrawable;
-import pl.droidsonroids.gif.MultiCallback;
 import wenjh.akit.activity.base.MainScreenFragment;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.AvatarAndName;
 import wenjh.akit.common.view.AvatarsLayout;
 import wenjh.akit.common.view.SmartImageView;
 import wenjh.akit.common.view.TagsLayout;
 import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.people.model.User;
 import wenjh.akit.demo.people.ui.UserProfileActivity;
 

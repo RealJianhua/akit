@@ -102,12 +102,6 @@
             android:label="@string/setting"
             android:screenOrientation="portrait" />
 
-        <receiver android:name="wenjh.akit.demo.PhonePowerOnReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
         <uses-library
             android:name="android.test.runner"
             android:required="false" />

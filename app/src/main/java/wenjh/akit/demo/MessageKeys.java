@@ -1,4 +1,4 @@
-package wenjh.akit.common.receiver;
+package wenjh.akit.demo;
 
 public interface MessageKeys {
 	String Action_Account_Logout = "actions.logout";
@@ -32,13 +32,13 @@ public interface MessageKeys {
 	String MsgStatus_Readed = "msgreaded";
 
 	String[] Actions_AllNotificationMessage = new String[]{
-			Action_CommunityMessge, 
+			Action_CommunityMessge,
 			Action_UserMessge,
 			Action_CommunityNotification
 	};
 	
 	String[] Actions_AllSessions = new String[]{
-			Action_CommunityMessge, 
+			Action_CommunityMessge,
 			Action_UserMessge,
 			Action_MessgeStatus
 	};

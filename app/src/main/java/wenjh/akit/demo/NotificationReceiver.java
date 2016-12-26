@@ -10,7 +10,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import wenjh.akit.common.receiver.AbsMessageReceiver;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.LogUtil;
 import wenjh.akit.demo.account.model.AccountSettingPreference;
 import wenjh.akit.demo.chat.NotificationUtil;

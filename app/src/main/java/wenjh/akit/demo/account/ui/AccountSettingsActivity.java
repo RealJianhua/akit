@@ -14,9 +14,9 @@ import android.widget.TextView;
 import com.wenjh.akit.R;
 
 import wenjh.akit.activity.base.BaseActivity;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.view.HoursPickerDialog;
 import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.account.model.AccountSettingPreference;
 import wenjh.akit.demo.maintab.SplashActivity;
 

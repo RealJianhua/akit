@@ -11,10 +11,10 @@ import com.wenjh.akit.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.chat.model.Message;
 import wenjh.akit.demo.chat.model.PeopleMessageService;
 import wenjh.akit.common.asynctask.AsyncCallback;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.StringUtil;
 import wenjh.akit.demo.people.BatchFetchUserProfileUtil;
 import wenjh.akit.demo.people.model.User;

@@ -14,10 +14,10 @@ import com.wenjh.akit.R;
 
 import wenjh.akit.activity.base.BaseActivity;
 import wenjh.akit.demo.ContextUtil;
+import wenjh.akit.demo.MessageKeys;
 import wenjh.akit.demo.account.model.AccountSettingPreference;
 import wenjh.akit.common.http.NetworkBaseException;
 import wenjh.akit.common.http.RangeUploadHandler;
-import wenjh.akit.common.receiver.MessageKeys;
 import wenjh.akit.common.util.StringUtil;
 import wenjh.akit.common.util.TakePictureHelper;
 import wenjh.akit.common.view.MProgressDialog;
