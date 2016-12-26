@@ -1,0 +1,6 @@
+[submodule "picasso"]
+	path = picasso
+	url = https://github.com/RealJianhua/picasso
+[submodule "android-gif-drawable"]
+	path = android-gif-drawable
+	url = https://github.com/RealJianhua/android-gif-drawable
