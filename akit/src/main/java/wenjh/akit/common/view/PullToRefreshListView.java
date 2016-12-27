@@ -44,6 +44,7 @@ public class PullToRefreshListView extends RefreshOnOverScrollListView implement
 	private boolean mCompletedScrollTop = true;
 	private Animation loadingAnimation = null;
 	private View loadMoreFooterView = null;
+	private boolean mAutoLoadMore;
 
 	public PullToRefreshListView(Context paramContext) {
 		super(paramContext);
@@ -104,6 +105,10 @@ public class PullToRefreshListView extends RefreshOnOverScrollListView implement
 		this.mEnableLoadMoreFoolter = enableLoadMoreFoolter;
 	}
 
+	public void setAutoLoadMore(boolean mAutoLoadMore) {
+		this.mAutoLoadMore = mAutoLoadMore;
+	}
+
 	public void removeLoadMoreFoolter() {
 		removeFooterView(loadMoreFooterView);
 	}
@@ -162,6 +167,17 @@ public class PullToRefreshListView extends RefreshOnOverScrollListView implement
 		} else {
 			setOverScrollView(null);
 			setOverScrollListener(null);
+		}
+	}
+
+	@Override
+	protected void onScrollEnd() {
+		if(mAutoLoadMore && loadingButton != null && loadingButton.getVisibility() == View.VISIBLE) {
+			if(getAdapter() != null && getLastVisiblePosition() >= getAdapter().getCount() - 3) {
+				if(!loadingButton.isLoading()) {
+					loadingButton.performClick();
+				}
+			}
 		}
 	}
 	

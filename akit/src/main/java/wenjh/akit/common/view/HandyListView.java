@@ -201,6 +201,7 @@ public class HandyListView extends ListView {
 				case OnScrollListener.SCROLL_STATE_IDLE:
 					scrolling = false;
 					lastVelocityY = 0;
+					onScrollEnd();
 					if (isScorllEndReflush() && listAdapter != null && listAdapter instanceof BaseAdapter) {
 						((BaseAdapter) listAdapter).notifyDataSetChanged();
 					} else {
@@ -228,6 +229,9 @@ public class HandyListView extends ListView {
 			}
 		});
 	}
+
+
+	protected void onScrollEnd() {}
 
 	/**
 	 * 滚动到列表顶部
