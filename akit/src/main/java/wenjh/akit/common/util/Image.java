@@ -6,6 +6,7 @@ import java.io.File;
 
 public class Image {
 	private Uri imageUri = null;
+	public boolean loading = false;
 
 	public Image(File file) {
 		imageUri = Uri.fromFile(file);

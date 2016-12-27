@@ -121,7 +121,7 @@ public abstract class MainScreenFragment extends BaseFragment implements ITipsHa
 
 	}
 
-	public void notifyDataChanaged() {
+	public void notifyDataChanged() {
 	}
 
 	protected View getTopTipView(ViewGroup root) {

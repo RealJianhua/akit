@@ -219,6 +219,7 @@ public class PullToRefreshListView extends RefreshOnOverScrollListView implement
 		addHeaderView(layout);
 		setFadingEdgeColor(0);
 		setFadingEdgeLength(0);
+		setTimeViewVisibility(false);
 	}
 
 	public void setLoadingViewText(int resid) {

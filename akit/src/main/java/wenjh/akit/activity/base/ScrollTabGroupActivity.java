@@ -203,7 +203,7 @@ public abstract class ScrollTabGroupActivity extends BaseActivity {
 		for (int i = 0; i < tabs.size(); i++) {
 			MainScreenFragment fragment = getFragment(i);
 			if(fragment != null && fragment.isCreated()) {
-				fragment.notifyDataChanaged();
+				fragment.notifyDataChanged();
 			}
 		}
 	}

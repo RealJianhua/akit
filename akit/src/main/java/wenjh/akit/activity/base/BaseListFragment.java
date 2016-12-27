@@ -101,7 +101,6 @@ public abstract class BaseListFragment<T> extends MainScreenFragment {
     	loadMoreButton.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
     
-    
     public void setListAdapter(BaseListAdapter<T> adapter) {
         synchronized (this) {
             mAdapter = adapter;
@@ -152,7 +151,11 @@ public abstract class BaseListFragment<T> extends MainScreenFragment {
     public void scrollToTop() {
     	mList.scrollToTop();
     };
-    
+
+    public void setAutoLoadMore(boolean autoLoadMore) {
+        mList.setAutoLoadMore(autoLoadMore);
+    }
+
     private AdapterView.OnItemLongClickListener mOnLongClickListener = new AdapterView.OnItemLongClickListener() {
 
 		@Override
@@ -177,4 +180,8 @@ public abstract class BaseListFragment<T> extends MainScreenFragment {
 			onLoadMore();
 		}
 	};
+
+    public void notifyDataChanged() {
+        mAdapter.notifyDataSetChanged();
+    }
 }

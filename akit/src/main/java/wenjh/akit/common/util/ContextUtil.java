@@ -2,6 +2,8 @@ package wenjh.akit.common.util;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +11,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Environment;
+import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -86,19 +89,52 @@ public class ContextUtil {
 		return false;
 	}
 
+	public static String getNetWorkType() {
+		ConnectivityManager connManager = (ConnectivityManager) sApplicationContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetInfo = connManager.getActiveNetworkInfo();// 获取网络的连接情况
+		if (activeNetInfo != null) {
+			if (activeNetInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+				return "wifi";
+			} else if (activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+				return "mobile";
+			}
+		}
+		return null;
+	}
+
 	public static boolean isWifi() {
-		// TODO Auto-generated method stub
-		return false;
+		return "wifi".equals(getNetWorkType());
 	}
 
 	public static int getMobileNetType() {
-		// TODO Auto-generated method stub
-		return 0;
+		try {
+			TelephonyManager manager = (TelephonyManager) getContext().getSystemService(Context.TELEPHONY_SERVICE);
+			return manager.getNetworkType();
+		} catch (Exception e) {
+		}
+		return -1;
 	}
 
 	public static int getVersionCode() {
-		// TODO Auto-generated method stub
-		return 0;
+		int versionCode = 0;
+		try {
+			PackageInfo pinfo = getContext().getPackageManager().getPackageInfo(getContext().getPackageName(), PackageManager.GET_CONFIGURATIONS);
+			versionCode = pinfo.versionCode;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return versionCode;
+	}
+
+	public static String getVersionName() {
+		try {
+			PackageInfo pinfo = getContext().getPackageManager().getPackageInfo(getContext().getPackageName(), PackageManager.GET_CONFIGURATIONS);
+			return pinfo.versionName;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "";
+
 	}
 
 	public static AKitApplication getApp() {
@@ -150,5 +186,5 @@ public class ContextUtil {
 	public static File getCacheDir() {
 		return ContextUtil.getContext().getExternalCacheDir();
 	}
-	
+
 }
